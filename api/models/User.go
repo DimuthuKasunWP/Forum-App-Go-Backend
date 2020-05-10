@@ -8,10 +8,9 @@ import (
 	"strings"
 	"time"
 
-	"github.com/victorsteven/forum/api/security"
-
 	"github.com/badoux/checkmail"
 	"github.com/jinzhu/gorm"
+	"github.com/victorsteven/forum/api/security"
 )
 
 type User struct {
