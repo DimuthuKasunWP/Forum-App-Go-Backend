@@ -11,10 +11,10 @@ require (
 	github.com/gin-gonic/gin v1.6.3
 	github.com/jinzhu/gorm v1.9.12
 	github.com/joho/godotenv v1.3.0 // indirect
-	github.com/matcornic/hermes/v2 v2.1.0 // indirect
+	github.com/matcornic/hermes/v2 v2.1.0
 	github.com/myesui/uuid v1.0.0 // indirect
 	github.com/sendgrid/rest v2.4.1+incompatible // indirect
-	github.com/sendgrid/sendgrid-go v3.5.0+incompatible // indirect
+	github.com/sendgrid/sendgrid-go v3.5.0+incompatible
 	github.com/twinj/uuid v1.0.0
 	golang.org/x/crypto v0.0.0-20200429183012-4b2356b1ed79
 	gopkg.in/stretchr/testify.v1 v1.2.2 // indirect
