@@ -9,18 +9,17 @@ import (
 	"github.com/sendgrid/sendgrid-go/helpers/mail"
 )
 
-type sendMail struct{}
+type sendMail struct {}
 
 type SendMailer interface {
-	SendResetPassword(string, string, string, string, string) (*EmailResponse, error)
+	SendResetPassword(string, string, string, string, string)  (*EmailResponse, error)
 }
-
 var (
 	SendMail SendMailer = &sendMail{} //this is useful when we start testing
 )
 
 type EmailResponse struct {
-	Status   int
+	Status int
 	RespBody string
 }
 

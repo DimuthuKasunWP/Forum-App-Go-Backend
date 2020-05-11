@@ -1,7 +1,7 @@
 package main
 
 import (
-	"github.com/victorsteven/forum/api"
+	"github.com/kasunwpdimuthu/forum/api"
 )
 
 func main() {

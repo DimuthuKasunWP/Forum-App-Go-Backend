@@ -4,8 +4,8 @@ import (
 	"log"
 	"testing"
 
+	"github.com/kasunwpdimuthu/forum/api/models"
 	"github.com/stretchr/testify/assert"
-	"github.com/victorsteven/forum/api/models"
 )
 
 func TestCreateComment(t *testing.T) {

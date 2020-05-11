@@ -7,8 +7,8 @@ import (
 	"testing"
 
 	"github.com/jinzhu/gorm"
-	"github.com/victorsteven/forum/api/controllers"
-	"github.com/victorsteven/forum/api/models"
+	"github.com/kasunwpdimuthu/forum/api/controllers"
+	"github.com/kasunwpdimuthu/forum/api/models"
 )
 
 var server = controllers.Server{}
@@ -62,7 +62,7 @@ func Database() {
 	//////////////////////////////////  COMMENT THIS WHILE TESTING ON LOCAL(WITHOUT USING CIRCLE CI)  //////////////////////
 	// WE HAVE TO INPUT TESTING DATA MANUALLY BECAUSE CIRCLECI, CANNOT READ THE ".env" FILE WHICH, WE WOULD HAVE ADDED THE TEST CONFIG THERE
 	// SO MANUALLY ADD THE NAME OF THE DATABASE, THE USER AND THE PASSWORD, AS SEEN BELOW:
-	DBURL := fmt.Sprintf("host=%s port=%s user=%s dbname=%s sslmode=disable password=%s", "127.0.0.1", "5432", "steven", "forum_db_test", "password")
+	DBURL := fmt.Sprintf("host=%s port=%s user=%s dbname=%s sslmode=disable password=%s", "127.0.0.1", "5432", "Dimuthu", "forum_db_test", "password")
 	server.DB, err = gorm.Open("postgres", DBURL)
 	if err != nil {
 		fmt.Printf("Cannot connect to %s database\n", "postgres")
@@ -229,13 +229,13 @@ func seedUsersPostsAndLikes() (models.Post, []models.User, []models.Like, error)
 	var err error
 	var users = []models.User{
 		models.User{
-			Username: "Steven",
-			Email:    "steven@example.com",
+			Username: "Dimuthu",
+			Email:    "Dimuthu@example.com",
 			Password: "password",
 		},
 		models.User{
-			Username: "Magu",
-			Email:    "magu@example.com",
+			Username: "Kasun",
+			Email:    "Kasun@example.com",
 			Password: "password",
 		},
 	}
@@ -288,13 +288,13 @@ func seedUsersPostsAndComments() (models.Post, []models.User, []models.Comment, 
 	var err error
 	var users = []models.User{
 		models.User{
-			Username: "Steven",
-			Email:    "steven@example.com",
+			Username: "Dimuthu",
+			Email:    "Dimuthu@example.com",
 			Password: "password",
 		},
 		models.User{
-			Username: "Magu",
-			Email:    "magu@example.com",
+			Username: "Kasun",
+			Email:    "Kasun@example.com",
 			Password: "password",
 		},
 	}

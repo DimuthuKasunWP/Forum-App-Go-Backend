@@ -8,9 +8,9 @@ import (
 	"strconv"
 
 	"github.com/gin-gonic/gin"
-	"github.com/victorsteven/forum/api/auth"
-	"github.com/victorsteven/forum/api/models"
-	"github.com/victorsteven/forum/api/utils/formaterror"
+	"github.com/kasunwpdimuthu/forum/api/auth"
+	"github.com/kasunwpdimuthu/forum/api/models"
+	"github.com/kasunwpdimuthu/forum/api/utils/formaterror"
 )
 
 func (server *Server) CreatePost(c *gin.Context) {

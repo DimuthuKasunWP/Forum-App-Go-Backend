@@ -3,11 +3,12 @@ package tests
 import (
 	"bytes"
 	"encoding/json"
-	"github.com/victorsteven/forum/api/mailer"
 	"log"
 	"net/http"
 	"net/http/httptest"
 	"testing"
+
+	"github.com/kasunwpdimuthu/forum/api/mailer"
 
 	"github.com/gin-gonic/gin"
 	"github.com/stretchr/testify/assert"
@@ -16,7 +17,8 @@ import (
 var (
 	sendMailFunc func(ToUser string, FromAdmin string, Token string, Sendgridkey string, AppEnv string) (*mailer.EmailResponse, error)
 )
-type sendMailMock struct {}
+
+type sendMailMock struct{}
 
 func (sm *sendMailMock) SendResetPassword(ToUser string, FromAdmin string, Token string, Sendgridkey string, AppEnv string) (*mailer.EmailResponse, error) {
 	return sendMailFunc(ToUser, FromAdmin, Token, Sendgridkey, AppEnv)
@@ -46,28 +48,27 @@ func TestForgotPasswordSuccess(t *testing.T) {
 			RespBody: "Success, Please click on the link provided in your email",
 		}, nil
 	}
-		inputJSON :=  `{"email": "pet@example.com"}` //the seeded user
-		r := gin.Default()
-		r.POST("/password/forgot", server.ForgotPassword)
-		req, err := http.NewRequest(http.MethodPost, "/password/forgot", bytes.NewBufferString(inputJSON))
-		if err != nil {
-			t.Errorf("this is the error: %v\n", err)
-		}
-		rr := httptest.NewRecorder()
-		r.ServeHTTP(rr, req)
+	inputJSON := `{"email": "pet@example.com"}` //the seeded user
+	r := gin.Default()
+	r.POST("/password/forgot", server.ForgotPassword)
+	req, err := http.NewRequest(http.MethodPost, "/password/forgot", bytes.NewBufferString(inputJSON))
+	if err != nil {
+		t.Errorf("this is the error: %v\n", err)
+	}
+	rr := httptest.NewRecorder()
+	r.ServeHTTP(rr, req)
 
-		responseInterface := make(map[string]interface{})
-		err = json.Unmarshal([]byte(rr.Body.String()), &responseInterface)
-		if err != nil {
-			t.Errorf("Cannot convert to json: %v", err)
-		}
-		message := responseInterface["response"]
-		status := responseInterface["status"]
+	responseInterface := make(map[string]interface{})
+	err = json.Unmarshal([]byte(rr.Body.String()), &responseInterface)
+	if err != nil {
+		t.Errorf("Cannot convert to json: %v", err)
+	}
+	message := responseInterface["response"]
+	status := responseInterface["status"]
 
-		assert.Equal(t, rr.Code, int(status.(float64))) //we convert interface to string.
-		assert.EqualValues(t, "Success, Please click on the link provided in your email", message)
+	assert.Equal(t, rr.Code, int(status.(float64))) //we convert interface to string.
+	assert.EqualValues(t, "Success, Please click on the link provided in your email", message)
 }
-
 
 func TestForgotPasswordFailures(t *testing.T) {
 

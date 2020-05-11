@@ -19,11 +19,11 @@ import (
 	"github.com/aws/aws-sdk-go/aws/session"
 	"github.com/aws/aws-sdk-go/service/s3"
 	"github.com/gin-gonic/gin"
-	"github.com/victorsteven/forum/api/auth"
-	"github.com/victorsteven/forum/api/models"
-	"github.com/victorsteven/forum/api/security"
-	"github.com/victorsteven/forum/api/utils/fileformat"
-	"github.com/victorsteven/forum/api/utils/formaterror"
+	"github.com/kasunwpdimuthu/forum/api/auth"
+	"github.com/kasunwpdimuthu/forum/api/models"
+	"github.com/kasunwpdimuthu/forum/api/security"
+	"github.com/kasunwpdimuthu/forum/api/utils/fileformat"
+	"github.com/kasunwpdimuthu/forum/api/utils/formaterror"
 )
 
 func (server *Server) CreateUser(c *gin.Context) {

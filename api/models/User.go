@@ -8,9 +8,10 @@ import (
 	"strings"
 	"time"
 
+	"github.com/kasunwpdimuthu/forum/api/security"
+
 	"github.com/badoux/checkmail"
 	"github.com/jinzhu/gorm"
-	"github.com/victorsteven/forum/api/security"
 )
 
 type User struct {
@@ -47,7 +48,7 @@ func (u *User) AfterFind() (err error) {
 		u.AvatarPath = os.Getenv("DO_SPACES_URL") + u.AvatarPath
 	}
 	//dont return the user password
-	//u.Password = ""
+	// u.Password = ""
 	return nil
 }
 
@@ -132,6 +133,7 @@ func (u *User) SaveUser(db *gorm.DB) (*User, error) {
 	return u, nil
 }
 
+// THE ONLY PERSON THAT NEED TO DO THIS IS THE ADMIN, SO I HAVE COMMENTED THE ROUTES, SO SOMEONE ELSE DONT VIEW THIS DETAILS.
 func (u *User) FindAllUsers(db *gorm.DB) (*[]User, error) {
 	var err error
 	users := []User{}

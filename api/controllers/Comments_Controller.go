@@ -2,19 +2,23 @@ package controllers
 
 import (
 	"encoding/json"
+	"fmt"
 	"io/ioutil"
 	"net/http"
 	"strconv"
 
 	"github.com/gin-gonic/gin"
-	"github.com/victorsteven/forum/api/auth"
-	"github.com/victorsteven/forum/api/models"
-	"github.com/victorsteven/forum/api/utils/formaterror"
+	"github.com/kasunwpdimuthu/forum/api/auth"
+	"github.com/kasunwpdimuthu/forum/api/models"
+	"github.com/kasunwpdimuthu/forum/api/utils/formaterror"
 )
 
 func (server *Server) CreateComment(c *gin.Context) {
 	//clear previous error if any
 	errList = map[string]string{}
+
+	fmt.Println("hello")
+	//fmt.Println("hello mine")
 
 	postID := c.Param("id")
 	pid, err := strconv.ParseUint(postID, 10, 64)

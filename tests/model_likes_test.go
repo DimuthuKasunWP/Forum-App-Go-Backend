@@ -5,7 +5,7 @@ import (
 	"testing"
 
 	"github.com/stretchr/testify/assert"
-	"github.com/victorsteven/forum/api/models"
+	"github.com/kasunwpdimuthu/forum/api/models"
 )
 
 func TestSaveALike(t *testing.T) {
