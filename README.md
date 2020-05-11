@@ -27,7 +27,7 @@
 
 ### Clone
 
-- Clone this project to your local machine `https://github.com/kasunwpdimuthu/Forum-App-Go-Backend.git`
+- Clone this project to your local machine `https://github.com/DimuthuKasunWP/Forum-App-Go-Backend.git`
 
 
 ### Setup
