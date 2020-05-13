@@ -4,8 +4,8 @@ import (
 	"log"
 	"testing"
 
+	"github.com/DimuthuKasunWP/forum/api/models"
 	"github.com/stretchr/testify/assert"
-	"github.com/kasunwpdimuthu/forum/api/models"
 )
 
 func TestSaveALike(t *testing.T) {

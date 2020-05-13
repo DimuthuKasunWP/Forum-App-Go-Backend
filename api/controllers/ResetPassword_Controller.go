@@ -7,11 +7,11 @@ import (
 	"net/http"
 	"os"
 
+	"github.com/DimuthuKasunWP/forum/api/mailer"
+	"github.com/DimuthuKasunWP/forum/api/models"
+	"github.com/DimuthuKasunWP/forum/api/security"
+	"github.com/DimuthuKasunWP/forum/api/utils/formaterror"
 	"github.com/gin-gonic/gin"
-	"github.com/kasunwpdimuthu/forum/api/mailer"
-	"github.com/kasunwpdimuthu/forum/api/models"
-	"github.com/kasunwpdimuthu/forum/api/security"
-	"github.com/kasunwpdimuthu/forum/api/utils/formaterror"
 )
 
 func (server *Server) ForgotPassword(c *gin.Context) {

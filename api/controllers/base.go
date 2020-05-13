@@ -5,13 +5,13 @@ import (
 	"log"
 	"net/http"
 
-	"github.com/kasunwpdimuthu/forum/api/middlewares"
+	"github.com/DimuthuKasunWP/forum/api/middlewares"
 
+	"github.com/DimuthuKasunWP/forum/api/models"
 	"github.com/gin-gonic/gin"
 	"github.com/jinzhu/gorm"
 	_ "github.com/jinzhu/gorm/dialects/mysql"    //mysql database driver
 	_ "github.com/jinzhu/gorm/dialects/postgres" //postgres database driver
-	"github.com/kasunwpdimuthu/forum/api/models"
 )
 
 type Server struct {

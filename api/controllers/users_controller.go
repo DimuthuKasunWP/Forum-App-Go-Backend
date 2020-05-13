@@ -7,16 +7,16 @@ import (
 	"net/http"
 	"strconv"
 
-	"github.com/kasunwpdimuthu/forum/api/fileupload"
+	"github.com/DimuthuKasunWP/forum/api/fileupload"
 
 	"github.com/joho/godotenv"
 	"golang.org/x/crypto/bcrypt"
 
+	"github.com/DimuthuKasunWP/forum/api/auth"
+	"github.com/DimuthuKasunWP/forum/api/models"
+	"github.com/DimuthuKasunWP/forum/api/security"
+	"github.com/DimuthuKasunWP/forum/api/utils/formaterror"
 	"github.com/gin-gonic/gin"
-	"github.com/kasunwpdimuthu/forum/api/auth"
-	"github.com/kasunwpdimuthu/forum/api/models"
-	"github.com/kasunwpdimuthu/forum/api/security"
-	"github.com/kasunwpdimuthu/forum/api/utils/formaterror"
 )
 
 func (server *Server) CreateUser(c *gin.Context) {

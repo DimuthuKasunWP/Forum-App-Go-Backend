@@ -4,7 +4,7 @@ import (
 	"log"
 	"testing"
 
-	"github.com/kasunwpdimuthu/forum/api/models"
+	"github.com/DimuthuKasunWP/forum/api/models"
 	"github.com/stretchr/testify/assert"
 )
 

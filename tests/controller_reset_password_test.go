@@ -8,7 +8,7 @@ import (
 	"net/http/httptest"
 	"testing"
 
-	"github.com/kasunwpdimuthu/forum/api/mailer"
+	"github.com/DimuthuKasunWP/forum/api/mailer"
 
 	"github.com/gin-gonic/gin"
 	"github.com/stretchr/testify/assert"

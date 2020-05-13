@@ -3,8 +3,8 @@ package middlewares
 import (
 	"net/http"
 
+	"github.com/DimuthuKasunWP/forum/api/auth"
 	"github.com/gin-gonic/gin"
-	"github.com/kasunwpdimuthu/forum/api/auth"
 )
 
 func TokenAuthMiddleware() gin.HandlerFunc {

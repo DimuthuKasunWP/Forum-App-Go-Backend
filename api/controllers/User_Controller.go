@@ -14,16 +14,16 @@ import (
 	"github.com/joho/godotenv"
 	"golang.org/x/crypto/bcrypt"
 
+	"github.com/DimuthuKasunWP/forum/api/auth"
+	"github.com/DimuthuKasunWP/forum/api/models"
+	"github.com/DimuthuKasunWP/forum/api/security"
+	"github.com/DimuthuKasunWP/forum/api/utils/fileformat"
+	"github.com/DimuthuKasunWP/forum/api/utils/formaterror"
 	"github.com/aws/aws-sdk-go/aws"
 	"github.com/aws/aws-sdk-go/aws/credentials"
 	"github.com/aws/aws-sdk-go/aws/session"
 	"github.com/aws/aws-sdk-go/service/s3"
 	"github.com/gin-gonic/gin"
-	"github.com/kasunwpdimuthu/forum/api/auth"
-	"github.com/kasunwpdimuthu/forum/api/models"
-	"github.com/kasunwpdimuthu/forum/api/security"
-	"github.com/kasunwpdimuthu/forum/api/utils/fileformat"
-	"github.com/kasunwpdimuthu/forum/api/utils/formaterror"
 )
 
 func (server *Server) CreateUser(c *gin.Context) {

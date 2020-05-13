@@ -6,9 +6,9 @@ import (
 	"os"
 	"testing"
 
+	"github.com/DimuthuKasunWP/forum/api/controllers"
+	"github.com/DimuthuKasunWP/forum/api/models"
 	"github.com/jinzhu/gorm"
-	"github.com/kasunwpdimuthu/forum/api/controllers"
-	"github.com/kasunwpdimuthu/forum/api/models"
 )
 
 var server = controllers.Server{}

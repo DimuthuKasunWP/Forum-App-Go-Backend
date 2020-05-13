@@ -3,8 +3,8 @@ package seed
 import (
 	"log"
 
+	"github.com/DimuthuKasunWP/forum/api/models"
 	"github.com/jinzhu/gorm"
-	"github.com/kasunwpdimuthu/forum/api/models"
 )
 
 var users = []models.User{

@@ -4,8 +4,8 @@ import (
 	"log"
 	"testing"
 
+	"github.com/DimuthuKasunWP/forum/api/models"
 	_ "github.com/jinzhu/gorm/dialects/mysql"
-	"github.com/kasunwpdimuthu/forum/api/models"
 	"github.com/stretchr/testify/assert"
 )
 

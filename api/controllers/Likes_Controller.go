@@ -5,10 +5,10 @@ import (
 	"net/http"
 	"strconv"
 
+	"github.com/DimuthuKasunWP/forum/api/auth"
+	"github.com/DimuthuKasunWP/forum/api/models"
+	"github.com/DimuthuKasunWP/forum/api/utils/formaterror"
 	"github.com/gin-gonic/gin"
-	"github.com/kasunwpdimuthu/forum/api/auth"
-	"github.com/kasunwpdimuthu/forum/api/models"
-	"github.com/kasunwpdimuthu/forum/api/utils/formaterror"
 )
 
 func (server *Server) LikePost(c *gin.Context) {

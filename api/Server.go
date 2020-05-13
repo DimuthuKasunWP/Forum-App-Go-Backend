@@ -5,8 +5,8 @@ import (
 	"log"
 	"os"
 
+	"github.com/DimuthuKasunWP/forum/api/controllers"
 	"github.com/joho/godotenv"
-	"github.com/kasunwpdimuthu/forum/api/controllers"
 )
 
 var server = controllers.Server{}
