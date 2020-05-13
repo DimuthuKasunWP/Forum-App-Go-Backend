@@ -103,5 +103,5 @@
 ## Author
 
 - Dimuthu Kasun
-- medium: medium.com/@DimuthuKasunWP
+- medium: medium.com/@kasunwpdimuthu
 - linkedin: linkedin.com/in/dimuthu-kasun/
